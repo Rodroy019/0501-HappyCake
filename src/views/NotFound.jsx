@@ -1,6 +1,8 @@
+import Alerta from '../components/Alerta'
+
 const NotFound = () => {
   return (
-    <div>NotFound</div>
+    <Alerta tipoVariant='danger' error='Error' descripcion='Ups, Ruta no encontrada' />
   )
 }
 

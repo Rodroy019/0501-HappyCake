@@ -9,6 +9,7 @@ const Cards = (props) => {
         <Card.Img variant='top' src={props.img} />
         <Card.Body>
           <Card.Title>{props.name}</Card.Title>
+          <Card.Text>{props.desc}</Card.Text>
         </Card.Body>
       </Card>
     </div>
@@ -19,6 +20,7 @@ const Cards = (props) => {
 Cards.propTypes = {
   id: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired
 }
 
