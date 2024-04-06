@@ -1,61 +1,29 @@
-import { useState } from 'react'
-import Alerta from './Alerta'
+import { Form, Container, Button } from 'react-bootstrap'
 
 const Formulario = () => {
-  const [form, setForm] = useState({ nombre: '', email: '', desc: '' })
-  const [alerta, setAlerta] = useState(null)
-
-  const validar = (e) => {
-    e.preventDefault()
-    if (form.nombre === '' || form.email === '') {
-      setAlerta(<Alerta tipoVariant='warning' error='Advertencia' descripcion='Por favor, ingrese su Nombre y/o Email.' />)
-      return
-    }
-    if (form.desc === '') {
-      setAlerta(<Alerta tipoVariant='danger' error='Error' descripcion='Por favor, ingrese un comentario para nosotros.' />)
-      return
-    }
-    setAlerta(<Alerta tipoVariant='success' error='Éxito' descripcion='¡Su mensaje a sido enviado! ¡Pronto lo Contactaremos!' />)
-  }
   return (
-    <form onSubmit={validar}>
-      <input
-        type='text'
-        placeholder='Nombre'
-        value={form.nombre}
-        onChange={e => {
-          setForm({
-            ...form,
-            nombre: e.target.value
-          })
-        }}
-      />
-      <input
-        type='email'
-        placeholder='Email'
-        value={form.email}
-        onChange={e => {
-          setForm({
-            ...form,
-            email: e.target.value
-          })
-        }}
-      />
-      <input
-        type='text'
-        placeholder='Escriba un mensaje para nosotros'
-        value={form.desc}
-        onChange={e => {
-          setForm({
-            ...form,
-            desc: e.target.value
-          })
-        }}
-      />
-      <button type='submit'>Enviar</button>
-      <br />
-      {alerta}
-    </form>
+    <Container className='my-5'>
+      <Form>
+        <Form.Group text='white' className='mb-3'>
+          <Form.Label>Nombre</Form.Label>
+          <Form.Control type='email' placeholder='Ingrese su Nombre' />
+        </Form.Group>
+        <Form.Group className='mb-3'>
+          <Form.Label>Email</Form.Label>
+          <Form.Control type='email' placeholder='name@example.com' />
+        </Form.Group>
+        <Form.Group className='mb-3'>
+          <Form.Label>Comentario</Form.Label>
+          <Form.Control as='textarea' rows={6} placeholder='Por Favor, ingrese un comentario' />
+        </Form.Group>
+        <div className='d-grid gap-2'>
+          <Button variant='primary' size='lg'>
+            Enviar
+          </Button>
+        </div>
+      </Form>
+
+    </Container>
   )
 }
 

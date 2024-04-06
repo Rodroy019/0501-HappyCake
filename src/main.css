@@ -1,1 +1,30 @@
-@import 'bootstrap/dist/css/bootstrap.min.css'
+body {
+    background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.8)
+    ), url('assets/img/fondo.jpeg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .form-label {
+    color: whitesmoke;
+  }
+
+  .centered-image {
+    max-width: 80%; /* Ajusta el tamaño máximo de la imagen */
+    max-height: 80%; /* Ajusta la altura máxima de la imagen */
+  }
+  .image-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+  }
+  .centrarAlerta{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }

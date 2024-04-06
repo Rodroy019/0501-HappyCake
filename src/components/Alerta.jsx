@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Alerta = (props) => {
   return (
-    <Alert variant={props.tipoVariant}>
+    <Alert variant={props.tipoVariant} className='centrarAlerta'>
       <Alert.Heading>{props.error}</Alert.Heading>
       <p>
         {props.descripcion}
