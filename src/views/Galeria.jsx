@@ -15,10 +15,10 @@ const Galeria = () => {
   // Renderiza todas las instancias de Cards almacenadas en cardsComponents
   return (
     <>
-      <Container className='my-4'>
-        <Row xs={1} md={2} lg={3} className='g-4'>
+      <Container className='my-5'>
+        <Row xs={1} md={2} lg={3} className='g-5'>
           {tortas.map((torta) => (
-            <Col key={torta.id}>
+            <Col key={torta.id} className=''>
               <Cards
                 id={torta.id}
                 img={torta.img}
