@@ -1,8 +1,9 @@
-# React + Vite
+# Desafío - Happy Cake
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción:
+La empresa Happy Cake SPA se dedica a cocinar pasteles personalizados y ha decidido financiar la creación de una página web en donde le permita a los clientes realizar cotizaciones y ofrecer un formulario de contacto.
+En este desafío deberás crear una aplicación React y utilizar React Router para ofrecer la navegación de 2 vistas basada en rutas: Home y Contacto.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Vista Home](src/assets/readme/home.png)
+![Vista Galeria](src/assets/readme/galeria.png)
+![Vista Contacto](src/assets/readme/contacto.png)
